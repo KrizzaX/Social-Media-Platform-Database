@@ -44,7 +44,7 @@ INSERT INTO message VALUES
 INSERT INTO notification VALUES
 (1,1,'like','Someone liked your post','2025-06-08 10:30:00','read'),
 (2,5,'Friend Request','You have a new friend request','2014-06-06 10:15:00','read'),
-(3,1,'comment','You have a new comment','2023-09-09 10:30:00','unread'),
+(3,1,'comment','You have a new comment','2023-09-09 10:20:00','unread'),
 (4,2,'message','You received a message','2023-08-12 17:10:00', 'read'), 
 (5,1,'like', 'Someone liked your post','2026-04-14 12:22:00', 'read');
 
