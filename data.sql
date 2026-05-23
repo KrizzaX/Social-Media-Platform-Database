@@ -35,7 +35,7 @@ INSERT INTO friendship_status VALUES
 (5,4,2,'2026-05-11', 'Friends');
 
 INSERT INTO message VALUES
-(1,1,2,'Do you need help?','2024-10-10 09:07:00','read'),
+(1,,2,'Do you need help?','2024-10-10 09:07:00','read'),
 (2,2,1,'Hi! I am good, thanks.','2024-06-17 09:12:00','read'),
 (3,3,4,'Thank you!','2026-03-12 12:00:00','delivered'),
 (4,2,1,'I will be there!','2014-10-06 10:12:00','read'),
