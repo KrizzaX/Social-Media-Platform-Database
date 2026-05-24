@@ -1,25 +1,19 @@
---EXAMPLES OF QUERIES based on Company Example Relations:
+-- Query 1 Retrieve profile information for a specific user by username.
+SELECT *
+FROM Users
+WHERE Username = 'X';
 
---Retrieve all posts made by users from New York
-SELECT u.name, p.text, p.timestamp
-FROM user u
-JOIN post p ON u.user_id = p.user_id
-WHERE u.location = 'New York';
+-- Query 2 List all posts created by a particular user.
+SELECT p.*
+FROM Posts p
+JOIN Users u
+    ON p.User_ID = u.User_ID
+WHERE u.Username = 'X';
 
---Find users born after January 1, 2000
-SELECT name, date_of_birth
-FROM user
-WHERE date_of_birth > '2000-01-01';
-
---Retrieve the user's name and privacy setting for Jane Smith
-SELECT name, privacy_setting
-FROM user
-WHERE name = 'Jane Smith';
-
---Update message read status
-UPDATE message
-SET read_status = 'read'
-WHERE message_id = 3;
+-- Query 3 Get all comments on a specific post.
+SELECT c.*
+FROM Comments c
+WHERE c.Post_ID = X;
 
 -- Query 4 Count the number of likes on a particular post
 SELECT COUNT(user_id) AS Like_Count
@@ -52,3 +46,13 @@ JOIN Chat_Participants cp
 WHERE cp.user_id = X
   AND m.sender_id <> X
   AND m.status = 'Unread';
+
+
+
+
+  
+
+-- Query 10 Retrieve all posts tagged with a specific location.
+SELECT *
+FROM post
+WHERE location = 'X';
