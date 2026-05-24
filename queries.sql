@@ -47,11 +47,39 @@ WHERE cp.user_id = X
   AND m.sender_id <> X
   AND m.status = 'Unread';
 
+-- Query 7 Retrieve all notifications for a specific user.
+SELECT n.*
+FROM notification n
+JOIN user u
+    ON n.user_id = u.user_id
+WHERE u.username = 'X';
 
+-- Query 8 List all members of a particular group
 
+SELECT u.user_id
+FROM user u
+JOIN group_membership gm 
+  ON gm.user_id = u.user_id
+JOIN group g
+  ON g.id = gm.id
+WHERE group_name = 'X';
 
+-- Query 9 Find the most popular posts with a certain minimum number of likes.
+SELECT 
+    p.post_id, 
+    p.content, 
+    COUNT(l.like_id) AS total_likes
+FROM post p
+JOIN likes l 
+    ON p.post_id = l.post_id
+GROUP BY 
+    p.post_id, 
+    p.content
+HAVING 
+    COUNT(l.like_id) >= 'X'
+ORDER BY 
+    total_likes DESC;
   
-
 -- Query 10 Retrieve all posts tagged with a specific location.
 SELECT *
 FROM post
