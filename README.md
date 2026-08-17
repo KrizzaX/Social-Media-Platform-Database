@@ -19,6 +19,12 @@ The database includes tables for:
 
 Relationships between the tables are created using primary and foreign keys.
 
+## Database Design
+
+The ER diagram below shows the main entities in the database and how they are connected through primary and foreign keys.
+
+![ER Diagram](images/ER%20diagram.jpg)
+
 ## SQL Queries
 
 The project includes queries for tasks such as:
